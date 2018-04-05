@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    background-color: burlywood;
+}
+.Todo{
+    height:100%;
+    width: 90%;
+    margin: auto;
+}
+header {
+    background:#2c3e50;
+	width:100%;
+	padding:20px;
+ 
+	/* Flexbox */
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+ 
+	flex-direction:row;
+	flex-wrap:wrap;
+}
+header nav{
+    width:55%;
+    padding: 5px;
+}
+header nav form{
+	/* Flexbox */
+	display:flex;
+    flex-direction: row;
+	flex-wrap:wrap;
+    justify-content: flex-end;
+}
+header nav form input[type=submit], input[type=text], input[type=password]{
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+input[type=submit]{
+    padding: 2px;
+}
+#logo{
+    width: 4vw;
+    height: 4vw;
+}
+.Conocenos{
+    width:30%;
+	/* Flexbox */
+ 
+	display:flex;
+    justify-content: space-around;
+    flex-direction: row;
+	flex-wrap:wrap;
+	align-items:center;
+}
+.Conocenos a{
+    flex-flow: 1 1 40%;
+    font-family: monospace;
+    margin: 15px;
+    text-decoration: none;
+    color: snow;
+}
+.main{
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.Registro{
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    padding: 20px 10px;
+    box-shadow: 0 0 3px grey;
+}
+.Registro form{
+    color: #303F9F;
+}
+.Registro h2, .Registro p{
+    color: #303F9F;
+}
+.Grupo{
+    position: relative;
+    margin-bottom: 32px;
+}
+.Grupo input[type=text], .Grupo input[type=password]{
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+    padding: 15px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #BBDEFB;
+}
+.Grupo input[type=text]:active, input[type=password]:active, .Grupo input[type=text]:hover, input[type=password]:hover{
+    outline: none;
+    border-bottom: 2px solid #303F9F;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.Grupo input[type=text].error, input[type=password].error{
+    border-bottom: 2px solid #D32F2F;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.Grupo input[type=text].error + label, input[type=password].error + label{
+    color:  #D32F2F;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.label{
+    position: absolute;
+    top: 16px;
+}
+.Form_R input[type=submit]{
+    padding: 5px;
+    box-shadow: 0 0 3px grey;
+    margin-left: 35%;
+}
+.Texto{
+    padding: 30px;
+    flex: 1 1 50%;
+}
+.Texto p{
+    text-align: justify;
+}
+#nombre{
+    padding-left: 70px;
+}
+#appat{
+    padding-left: 125px;
+}
+#apmat{
+    padding-left: 130px;
+}
+#edad{
+    padding-left: 50px;
+}
+#email{
+    padding-left: 60px;
+}
+#pass{
+    padding-left: 90px;
+}
+#pass2{
+    padding-left: 170px;
+}
+input[type=radio]{
+    display: none;
+}
+.radio label{
+    cursor: pointer;
+    padding: 10px 5px 10px 30px;
+    display: inline-block;
+    position: relative;
+}
+.radio label:hover{
+    background-color: rgba(0,120,198, .4);
+    border-radius: 5px;
+        -webkit-transition: all .7s ease;
+        -o-transition: all .7s ease;
+        transition: all .7s ease;
+}
+.radio label:before{
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 2px;
+    top: 9px;
+    border-radius: 50px;
+    background: none;
+    border: 2px solid #303F9F;
+}
+input[type=radio]:checked + label:before{
+    display: none;
+}
+input[type=radio]:checked + label{
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: rgb(0,120,198);
+    color: aliceblue;
+}
+@media screen and (max-width:1277px){
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header nav{
+        width: 40%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    header nav form{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #logo{
+        width: 100px;
+        height: 100px;
+    }
+    .Conocenos{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+}
+@media screen and (max-width: 800px) {
+	.Todo {
+		flex-direction:column;
+        width: 100%;
+        padding: 0;
+	}
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+    .Form_R input[type=submit]{
+        margin-left: 43%;
+    }
+	header {
+		flex-direction:column;
+		padding:0;
+	}
+	header #logo {
+		margin:20px 0;
+        width: 80px;
+        height: 80px;
+	}
+    .Conocenos{
+        width: 100%;
+    }
+    header nav{
+		width: 100%;
+    }
+	header nav form{
+        display: flex;
+        flex-wrap: nowrap;
+        resize: both;
+	}
+    /*resize: vertical;*/
+}
+@media screen and (max-width: 600px) {
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    header nav{
+        width: 8vw;
+        height: 8vw;
+        background-image: url(../img/Menu.png);
+        background-size: cover;
+        position: absolute;
+        right: 2vw;
+        top: 4vw;
+    }
+    .Conocenos{
+        flex-direction: row;
+        justify-content: center;
+    }
+    header nav form{
+        display: none;
+    }
+    header nav:hover{
+        background-color: rgba(0,0,0,.1);
+        background-size: 0px;
+        width: 200px;
+        height: 260px;
+    }
+    header nav:hover>form{
+        display: block;
+        position: absolute;
+        right: 2px;
+        top: 8vw;
+        display: flex;
+        flex-direction: column;
+        padding-right: 10px;
+        padding-top: 20px;
+    }
+}
